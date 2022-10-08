@@ -1,0 +1,13 @@
+.card{
+    border: 1px solid black;
+    width: 75%;
+    min-height: calc(100% / 8 - 20px);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-button-container{
+  margin-top: auto;
+}
