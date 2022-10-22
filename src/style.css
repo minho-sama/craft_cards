@@ -1,5 +1,12 @@
+:root{
+  --craft-font: Roboto, Sohne, system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --dark-white: rgb(225, 225, 225)
+}
+
 body {
   background-color: white;
+  font-family: var(--craft-font);
+  letter-spacing: 0.5px;
 }
 
 body.dark {
@@ -10,16 +17,17 @@ body.dark {
   background-color: #dfdfdf;
   border: none;
   color: #484848;
-  padding: 15px 32px;
+  padding: 12px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.btn.dark {
+.btn.dark,
+.dark .btn {
   background-color: #464646;
   color: #cfcfcf;
 }
@@ -55,39 +63,43 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red
+  gap: 5px;
+  /* border: 1px solid red */
 }
 
 .header.info{
   font-size: 15px;
-  padding: 5px;
+  padding: 5px 0;
   gap: 10px
 }
 
 #card-container{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px
-  /*
-    hogy jól nézzen ki, majd overflow-x hidden de no croll, az utolsó kártya fele látszódjon majd csak
-  */
+  gap: 20px;
+  overflow-y: hidden;
 }
 
-/*scrollbar style!!!*/
+/*SCROLLBAR style!!!*/
 
-/*for development only*/
+/*FOR DEVELOPMENT ONLY*/
 
-#main-column{
+/* #main-column{
   border: 1px solid black;
   width: 400px;
   min-width: 350px;
   float: right
-}
+} */
+
+/* .header,
+#card-container{
+  border: 1px solid red
+} */
 
 body{
   margin: 0

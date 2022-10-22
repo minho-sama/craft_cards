@@ -1,0 +1,122 @@
+.modal{
+    position: fixed;
+    background-color: #222222;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 25px;
+    width: 100vw;
+    height: 85vh;
+    transition: 0.5s;
+  }
+  
+  .modal.open{
+    bottom: 0%
+  }
+  
+  .modal.closed{
+    bottom: -85vh
+  }
+  
+  .modal .wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+  }
+  
+  .modal-button{
+    position:absolute;
+    top: -20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position:relative
+  }
+  
+  .modal.open .modal-button{
+    top: 5px;
+  }
+  
+  .modal.open .modal-button:after{
+    position: absolute;
+    right: -25px;
+    top: 10px;
+    content: "";
+    border-bottom: 3px solid var(--dark-white);
+    border-top: 3px solid var(--dark-white);
+    width: 60px;
+    border-radius: 20px;
+  }
+  
+  .modal.closed .modal-button:after{
+    position: absolute;
+    top: -18px;
+    right: 40%;
+    content: "";
+    border-top: 3px solid var(--dark-white);
+    border-left: 3px solid var(--dark-white);
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+  }
+  
+  .selection-to-preview-btn{
+    margin-top: 40px;
+    margin-left: 10px;
+    align-self: flex-start;
+  }
+  
+  .preview-card-container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding-top: 20px;
+  }
+  
+  .preview-card{
+    background: #303133;
+    color: var(--dark-white);
+    width: 88%;
+    padding: 7px;
+    border-radius: 0.5rem;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .preview-card .front,
+  .preview-card .back{
+    padding: 5px
+  }
+  
+  .preview-card textarea{
+    height:auto;
+    overflow-y:hidden;
+    min-height: 30px;
+    width: 100%;
+    word-wrap: break-word;
+    max-width: 100%;
+    min-width:100%; 
+    resize: none;
+    outline: none;
+    border: none;
+    color: var(--dark-white);
+    background: #222222;
+    font-family: var(--craft-font);
+    background: #303133;
+    letter-spacing: 0.5px;
+  }
+  
+  .preview-card .front{
+    border-bottom: 1px solid var(--dark-white);
+  }
+
+/*FOR DEVELOPMENT ONLY*/
+/* .modal.closed{
+  bottom: 0%
+} */

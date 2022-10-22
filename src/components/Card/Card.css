@@ -1,13 +1,20 @@
+/*SZEKSZI CARD ANIMATIONS: https://www.framer.com/motion/*/
+/*fel meg oldalra csúszkálás*/
+/*expand mode ami nagyban mutatja a kártyákat és egyszerre csak 1et*/
+
 .card{
     border: 1px solid black;
     width: 75%;
-    min-height: calc(100% / 8 - 20px);
+    min-height: calc(100% / 4 - 20px);
     padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    cursor: pointer
 }
 
+/*ALJÁRA pozicionálni nem marginnal, nem pos absolute-tal*/
 .arrow-button-container{
-  margin-top: auto;
+  margin-top: auto
 }

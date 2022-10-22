@@ -1,0 +1,169 @@
+{
+    "type": "textBlock",
+    "content": [
+        {
+            "text": "Craft X developer tools"
+        }
+    ],
+    "id": "b8xndloveeg",
+    "spaceId": "4fdolpnlhu1",
+    "documentId": "1vjawo219f5",
+    "indentationLevel": 0,
+    "listStyle": {
+        "type": "none"
+    },
+    "hasBlockDecoration": false,
+    "hasFocusDecoration": false,
+    "color": "text",
+    "subblocks": [
+        {
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "These tools facilitate extension development by creating a mock Craft API."
+                }
+            ],
+            "id": "jkz01sdmlm",
+            "spaceId": "4fdolpnlhu1",
+            "documentId": "1vjawo219f5",
+            "indentationLevel": 0,
+            "listStyle": {
+                "type": "none"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "By reducing the feedback cycle developers can iterate with great velocity."
+                }
+            ],
+            "id": "kgfr4zuakk",
+            "spaceId": "4fdolpnlhu1",
+            "documentId": "1vjawo219f5",
+            "indentationLevel": 0,
+            "listStyle": {
+                "type": "none"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card1"
+                }
+            ],
+            "listStyle": {
+                "type": "toggle"
+            },
+            "subblocks": [],
+            "id": "8ohmiu9w9w8",
+            "spaceId": "4fdolpnlhu1",
+            "documentId": "1vjawo219f5",
+            "indentationLevel": 0,
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card 2"
+                }
+            ],
+            "listStyle": {
+                "type": "toggle"
+            },
+            "id": "fxijzne7g0d",
+            "spaceId": "4fdolpnlhu1",
+            "documentId": "1vjawo219f5",
+            "indentationLevel": 0,
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card 3"
+                }
+            ],
+            "listStyle": {
+                "type": "toggle"
+            },
+            "id": "loih9l6nlo",
+            "spaceId": "4fdolpnlhu1",
+            "documentId": "1vjawo219f5",
+            "indentationLevel": 0,
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card 4"
+                }
+            ],
+            "listStyle": {
+                "type": "toggle"
+            },
+            "id": "ru07wanqf2",
+            "spaceId": "4fdolpnlhu1",
+            "documentId": "1vjawo219f5",
+            "indentationLevel": 0,
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        }
+    ],
+    "style": {
+        "textStyle": "body",
+        "fontStyle": "system",
+        "alignmentStyle": "left"
+    }
+}

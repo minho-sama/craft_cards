@@ -1,0 +1,230 @@
+{
+    "id": "2f4c231c-0317-449a-8403-22be2a27632d",
+    "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+    "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+    "listStyle": {
+        "type": "none"
+    },
+    "hasBlockDecoration": false,
+    "hasFocusDecoration": false,
+    "color": "text",
+    "indentationLevel": 0,
+    "type": "textBlock",
+    "content": [
+        {
+            "text": "2022.09.30",
+            "isBold": false,
+            "isItalic": false,
+            "isStrikethrough": false,
+            "isCode": false
+        }
+    ],
+    "subblocks": [
+        {
+            "id": "FEE03319-2DF9-4B7A-9166-78E42DC342C8",
+            "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+            "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+            "listStyle": {
+                "type": "toggle"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "indentationLevel": 0,
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "testToggleBlock",
+                    "isBold": false,
+                    "isItalic": false,
+                    "isStrikethrough": false,
+                    "isCode": false
+                }
+            ],
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "id": "1A69DAF9-D149-4339-865A-21736391BC56",
+            "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+            "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+            "listStyle": {
+                "type": "toggle"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "indentationLevel": 1,
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "Content for testToggleBlock",
+                    "isBold": false,
+                    "isItalic": false,
+                    "isStrikethrough": false,
+                    "isCode": false
+                }
+            ],
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "id": "dee6ffaf-6dbd-42b8-af72-0af89f01fa54",
+            "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+            "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+            "listStyle": {
+                "type": "toggle"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "indentationLevel": 0,
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card1",
+                    "isBold": false,
+                    "isItalic": false,
+                    "isStrikethrough": false,
+                    "isCode": false
+                }
+            ],
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "id": "b52d706e-c429-45dc-893e-d3459294b82c",
+            "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+            "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+            "listStyle": {
+                "type": "toggle"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "indentationLevel": 0,
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card 2",
+                    "isBold": false,
+                    "isItalic": false,
+                    "isStrikethrough": false,
+                    "isCode": false
+                }
+            ],
+            "subblocks": [
+                {
+                    "id": "81c71540-66fa-458c-b192-7d967ec14a64",
+                    "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+                    "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+                    "listStyle": {
+                        "type": "toggle"
+                    },
+                    "hasBlockDecoration": false,
+                    "hasFocusDecoration": false,
+                    "color": "text",
+                    "indentationLevel": 0,
+                    "type": "textBlock",
+                    "content": [
+                        {
+                            "text": "craft card1",
+                            "isBold": false,
+                            "isItalic": false,
+                            "isStrikethrough": false,
+                            "isCode": false
+                        }
+                    ],
+                    "subblocks": [],
+                    "style": {
+                        "textStyle": "body",
+                        "fontStyle": "system",
+                        "alignmentStyle": "left"
+                    }
+                }
+            ],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "id": "f03249a4-854e-4374-9555-30cd8fb0f524",
+            "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+            "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+            "listStyle": {
+                "type": "toggle"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "indentationLevel": 0,
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card 3",
+                    "isBold": false,
+                    "isItalic": false,
+                    "isStrikethrough": false,
+                    "isCode": false
+                }
+            ],
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        },
+        {
+            "id": "c60defb0-9dea-4b94-b2f8-61407b9c0549",
+            "documentId": "3ea3ee23-a1e1-44ae-b36e-175e49f96707",
+            "spaceId": "5ca30fa3-c3ca-9251-080a-6cb68659ce27",
+            "listStyle": {
+                "type": "toggle"
+            },
+            "hasBlockDecoration": false,
+            "hasFocusDecoration": false,
+            "color": "text",
+            "indentationLevel": 0,
+            "type": "textBlock",
+            "content": [
+                {
+                    "text": "craft card 4",
+                    "isBold": false,
+                    "isItalic": false,
+                    "isStrikethrough": false,
+                    "isCode": false
+                }
+            ],
+            "subblocks": [],
+            "style": {
+                "textStyle": "body",
+                "fontStyle": "system",
+                "alignmentStyle": "left"
+            }
+        }
+    ],
+    "style": {
+        "textStyle": "page",
+        "fontStyle": "system",
+        "alignmentStyle": "left",
+        "coverImage": {
+            "enabled": false,
+            "primaryColor": "#f2f2f2"
+        }
+    }
+}

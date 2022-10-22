@@ -2,16 +2,16 @@ import * as React from "react"
 import * as ReactDOM from 'react-dom'
 import craftXIconSrc from "./craftx-icon.png"
 import Card from "./components/Card/Card"
+import QuickCreate from "./components/QuickCreate"
+import MyCollections from "./components/MyCollections"
+import Modal from "./components/Modal"
+
 
 const App: React.FC<{}> = () => {
   const isDarkMode = useCraftDarkMode();
 
   const [toggleBlocks, setToggleblocks]:any = React.useState()
-  const [completedCount, setCompletedCount]:any = React.useState(0)
-
-  React.useEffect( () => {
-    console.log(toggleBlocks)
-  }, [toggleBlocks])
+  const [initialBlocksLength, setInitialBlocksLength]:any = React.useState()
 
   React.useEffect(() => {
     if (isDarkMode) {
@@ -27,20 +27,20 @@ const App: React.FC<{}> = () => {
   }, [])
 
   async function insertToggleBlocksForDev() {  //for development only
-
-    const text1subblock = craft.blockFactory.textBlock({
-      content: "craft card1 back"
-    })
   
     const text1 = craft.blockFactory.textBlock({
       content: "craft card1",
       listStyle: { type: "toggle" },
-      subblocks: [text1subblock]
     });
+
+    const text1subblock = craft.blockFactory.textBlock({
+      content: "back of card1",
+      indentationLevel: 1
+    })
 
     const text2 = craft.blockFactory.textBlock({
       content: "craft card 2",
-      listStyle: { type: "toggle" }
+      listStyle: { type: "toggle" },
     });
 
     const text3 = craft.blockFactory.textBlock({
@@ -53,45 +53,31 @@ const App: React.FC<{}> = () => {
       listStyle: { type: "toggle" }
     });
   
-    craft.dataApi.addBlocks([text1, text2, text3, text4]);
+    craft.dataApi.addBlocks([text1, text1subblock, text2, text3, text4]);
   
-  }
-
-  async function collectToggleCards(){
-
-    //getCurrentPage dolgot kiszervezni custom hookba?
-    const result = await craft.dataApi.getCurrentPage();
-    if (result.status !== "success") {
-        // Handle error!!!
-        throw new Error(result.error);
-    }
-    const pageBlock = result.data;
-    
-    const toggleBlocks = pageBlock.subblocks.filter((block) => {  //only first level blocks
-      return block.listStyle.type === "toggle"
-    })
-
-    const shuffledToggleBlocks = shuffleCards(toggleBlocks)
-
-    setToggleblocks(shuffledToggleBlocks)
   }
 
   function shuffleCards (blocks:any){
     for (let i = 0; i < blocks.length; i++) {
-        let j = Math.floor(Math.random() * (i + 1));
-        let temp = blocks[i];
-        blocks[i] = blocks[j];
-        blocks[j] = temp;
-        //átírni szebbre es6!!!
+      const j = Math.floor(Math.random() * (i + 1));
+      [blocks[i], blocks[j]] = [blocks[j], blocks[i]]
     }
     return blocks
   }
 
+  function reArrangeCard(){
+    const blocksCopy = JSON.parse(JSON.stringify(toggleBlocks))
+    const insertAt = Math.floor(Math.random() * blocksCopy.length)
+    const blockToInsert = blocksCopy.shift()
+    setToggleblocks([...blocksCopy.slice(0, insertAt), blockToInsert, ...blocksCopy.slice(insertAt)])
+  }
+
+  //pass down to Card component?
   function filterCompletedCard(cardId: string){
     //NÉZNI BEST PRACTICET
-    //filter rosszabb performance-ban mint pl a slice? 
-    //először deep copy? vagy lehet egyből így: setToggleBlocks(toggleBlocks => toggleBlocks.filter(block => block.id !== cardId))
+    //először DEEP COPY? vagy lehet egyből így: setToggleBlocks(toggleBlocks => toggleBlocks.filter(block => block.id !== cardId))
     //és muszáj ez a helper function, nem egyszerűbb leproppolni Card.js-nek és onnan direktben?
+    //https://stackoverflow.com/questions/60230221/how-can-i-update-this-state-without-mutating-the-array
 
     setToggleblocks((toggleBlocks:any) => toggleBlocks.filter((block:any) => block.id !== cardId))
 
@@ -100,28 +86,40 @@ const App: React.FC<{}> = () => {
     console.log(toggleBlocks)
   }
 
+  //tabok: saved colletions -> learning felület; create collection ez sheet containerben lesz
   return <div id = "main-column">
     <div className = "header main">
       <img className="icon" src={craftXIconSrc} alt="CraftX logo" />
-      <button className={`btn ${isDarkMode ? "dark" : ""}`} onClick={collectToggleCards}>
-        create cards
-      </button>
+      {/* <QuickCreate 
+        setToggleblocks  = {setToggleblocks}
+        setInitialBlocksLength = {setInitialBlocksLength} 
+        shuffleCards = {shuffleCards}>
+      </QuickCreate> */}
+      <MyCollections>
+
+      </MyCollections>
+      {/* <CreateCollection>
+
+      </CreateCollection> */}
     </div>
+
     {
       toggleBlocks?.length > 0 &&
       <div className = "header info">
         <span>uncompleted: {toggleBlocks.length}</span>
-        <span>completed: {completedCount}</span>
+        <span>completed: {initialBlocksLength - toggleBlocks.length}</span>
       </div>
     }
+
+    {/*card-containert külön componentbe és csak akkor renderelni ha kell!*/}
     <div id = "card-container">
       {
         toggleBlocks?.length > 0 ? 
         <>
-        {
-          toggleBlocks.map((block:any, i:number) => {
+        { /*majd megcsinálni, hogy csak 1-et rendereljen ki! a maradék csak üres div! performance optimization */
+          toggleBlocks.slice(0,4).map((block:any, i:number) => {
             console.log("card rendered")
-            return <Card key = {block.id} block = {block} setCompletedCount = {setCompletedCount} filterCompletedCard = {filterCompletedCard} index = {i}></Card>
+            return <Card key = {block.id} block = {block} reArrangeCard = {reArrangeCard} filterCompletedCard = {filterCompletedCard} index = {i}></Card>
           })
         }
         </> 
@@ -129,6 +127,9 @@ const App: React.FC<{}> = () => {
         <div>info about this extension bla bla</div>
       }
     </div>
+
+    <Modal></Modal>
+
   </div>;
 }
 
@@ -142,6 +143,6 @@ function useCraftDarkMode() {
   return isDarkMode;
 }
 
-export function initApp() {
+export function initApp(): void {
   ReactDOM.render(<App />, document.getElementById('react-root'))
 }
